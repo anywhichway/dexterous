@@ -1,4 +1,7 @@
 # dexterous
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1daac1a5b69c44f68b4dc36713a4acc7)](https://www.codacy.com/app/syblackwell/dexterous?utm_source=github.com&utm_medium=referral&utm_content=anywhichway/dexterous&utm_campaign=badger)
+
 A light weight isomorphic JavaScript middleware server for browser, WebWorkers, and NodeJS.
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1daac1a5b69c44f68b4dc36713a4acc7)](https://www.codacy.com/app/syblackwell/dexterous?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=anywhichway/dexterous&amp;utm_campaign=Badge_Grade)
