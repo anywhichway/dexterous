@@ -1,0 +1,1 @@
+curl -X PUT "https://api.cloudflare.com/client/v4/zones/:zone/workers/script" -H "X-Auth-Email:EMAIL" -H "X-Auth-Key:KEY" -H "Content-Type:application/javascript" --data-binary "@app.js"

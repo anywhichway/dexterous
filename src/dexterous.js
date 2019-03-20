@@ -1,3 +1,4 @@
+
 (function() {
 	class Dexterous {
 		constructor(options) {
@@ -54,8 +55,7 @@
 	  		id = value.data.id;
 	  		value = value.data.message;
 	  	}
-			const app = this;
-			Object.defineProperty(value,"app",{enumerable:false,configurable:true,writable:true,value:app});
+			Object.defineProperty(value,"app",{enumerable:false,configurable:true,writable:true,value:this});
 			for(i=0;i<this._middleware.length && value!==undefined;i++) {
 	      const handler = this._middleware[i];
 	      next = value;
@@ -70,15 +70,20 @@
 	        }
 	        if(this._options.trace && this._options.log) this._options.log.log([i,j],step.name||"anonymous",result)
 	        if(result) {
+						console.log(result,JSON.stringify(result.value));
 	        	next = result.value!==undefined ? result.value : result;
 	        	value = result.value;
-	        	if(result.done || result.value==undefined) break;
+	        	if(result.done || result.value==undefined) {
+							value = undefined;
+							break;
+						}
 	        } else {
 	        	next = result;
 	        	value = undefined;
 	        }
 				}
 			}
+			//console.log(next)
 			if(next) {
 				next = this.final(next);
 				if(next && next.error) this._options.log.log(next.error)
@@ -144,6 +149,6 @@
 			return this;
 		}
 	}
-	if(typeof(module)!=="undefined") module.exports = Dexterous;
+	if(true) module.exports = Dexterous;
 	if(typeof(window)!=="undefined") window.Dexterous = Dexterous;
 }).call(this);

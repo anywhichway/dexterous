@@ -1,6 +1,6 @@
 {
   "name": "dexterous",
-  "version": "v1.0.5a",
+  "version": "v1.0.5b",
   "description": "A light weight isomorphic JavaScript middleware server for the Browser, Web Workers, Service Workers, NodeJS and Cloudflare.",
   "engines": {
     "node": ">=10.0.0"
